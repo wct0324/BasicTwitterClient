@@ -3,11 +3,11 @@
 
     <string name="app_name">Basic Twitter</string>
     <string name="action_settings">Settings</string>
-    <string name="config_key">keyTimeLine</string>
+    <string name="config_key">keyConfig</string>
     <string name="login_label">Connect to Twitter</string>
+    <string name="title_activity_profile"></string>
     <string name="title_activity_time_line">Home</string>
     <string name="title_activity_tweet"></string>
-    <string name="twitter_screen_name">TyphoonWayne</string>
     <string name="twitter_tweet_limit">140</string>
     <string name="twitter_time_line_count">25</string>
 

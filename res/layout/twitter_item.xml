@@ -5,10 +5,13 @@
 
     <ImageView
         android:id="@+id/ivProfileImage"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:onClick="onProfileView"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp"
         android:src="@drawable/ic_launcher" />
 
     <TextView
@@ -18,9 +21,9 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/ivProfileImage"
         android:maxLines="1"
-        android:maxWidth="77dp"
+        android:maxWidth="100dp"
         android:paddingLeft="2dp"
-        android:text="Rio"
+        android:textSize="9sp"
         android:textStyle="bold" />
 
     <TextView
@@ -30,9 +33,9 @@
         android:layout_alignParentTop="true"
         android:layout_toRightOf="@+id/tvName"
         android:maxLines="1"
-        android:maxWidth="77dp"
+        android:maxWidth="100dp"
         android:paddingLeft="2dp"
-        android:text="Rio" />
+        android:textSize="9sp" />
 
     <TextView
         android:id="@+id/tvTime"
@@ -41,7 +44,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
         android:gravity="right"
-        android:text="Rio" />
+        android:textSize="9sp" />
 
     <TextView
         android:id="@+id/tvBody"
@@ -50,6 +53,6 @@
         android:layout_below="@+id/tvName"
         android:layout_toRightOf="@+id/ivProfileImage"
         android:paddingLeft="2dp"
-        android:text="Rio" />
+        android:textSize="12sp" />
 
 </RelativeLayout>

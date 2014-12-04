@@ -68,7 +68,7 @@ public class TweetActivity extends Activity {
 	}
 
 	private void getUser() {
-		this.client.getUser(new JsonHttpResponseHandler() {
+		this.client.getMyInfo(new JsonHttpResponseHandler() {
 
 			@Override
 			public void onSuccess(JSONObject json) {
@@ -98,17 +98,16 @@ public class TweetActivity extends Activity {
 	}
 
 	private void attach(User self) {
-		ImageView ivProfileImage = (ImageView) this
-				.findViewById(R.id.ivSelfImage);
-		TextView tvName = (TextView) this.findViewById(R.id.tvOwnName);
-		TextView tvScreenName = (TextView) this
+		ImageView ivSelfImage = (ImageView) this.findViewById(R.id.ivSelfImage);
+		TextView tvOwnName = (TextView) this.findViewById(R.id.tvOwnName);
+		TextView tvOwnScreenName = (TextView) this
 				.findViewById(R.id.tvOwnScreenName);
 
-		ivProfileImage.setImageResource(0);
-		Picasso.with(this).load(self.getProfileImageURL()).into(ivProfileImage);
+		ivSelfImage.setImageResource(0);
+		Picasso.with(this).load(self.getProfileImageURL()).into(ivSelfImage);
 
-		tvName.setText(self.getName());
-		tvScreenName.setText("@" + self.getScreenName());
+		tvOwnName.setText(self.getName());
+		tvOwnScreenName.setText("@" + self.getScreenName());
 	}
 
 	private TextWatcher twCounter = new TextWatcher() {

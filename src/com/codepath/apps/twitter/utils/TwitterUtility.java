@@ -33,14 +33,8 @@ public class TwitterUtility {
 				Context.MODE_PRIVATE);
 		Editor editor = spConfig.edit();
 		long maxID = spConfig.getLong("maxID", Long.MAX_VALUE);
-		long sinceID = spConfig.getLong("sinceID", Long.MIN_VALUE);
 		if (uid < maxID) {
 			editor.putLong("maxID", uid);
-			editor.commit();
-		}
-
-		if (uid > sinceID) {
-			editor.putLong("sinceID", uid);
 			editor.commit();
 		}
 	}

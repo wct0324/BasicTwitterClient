@@ -46,6 +46,7 @@ public class TweetArrayAdapter extends ArrayAdapter<Tweet> {
 				DateUtils.MINUTE_IN_MILLIS, DateUtils.WEEK_IN_MILLIS, 0);
 
 		ivProfileImage.setImageResource(0);
+		ivProfileImage.setTag(tweet.getUser().getUid());
 		Picasso.with(getContext()).load(tweet.getUser().getProfileImageURL())
 				.into(ivProfileImage);
 
